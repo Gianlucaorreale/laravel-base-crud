@@ -14,9 +14,11 @@
     </div>
     <div class="card-body">
          <div class="row">
-            <div class="col-3 pt-3">
-                <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid">
-            </div>
+            @if($comic->thumb)
+                <div class="col-3 pt-3">
+                    <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid">
+                </div>
+            @endif
             <div class="col-9 ">
                 <h3>{{$comic->series}}</h3>
                 <p>{{$comic->description}}</p>
