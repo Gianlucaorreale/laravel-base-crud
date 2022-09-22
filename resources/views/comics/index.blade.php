@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
     <div class="card-title">
         <h1>Comics</h1>
     </div>
@@ -51,6 +52,7 @@
     @endforelse
     
 </table>
+    </div>
     </div>
 </body>
 </html>
