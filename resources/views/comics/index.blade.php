@@ -11,7 +11,7 @@
     <div class="container">
     <div class="card-title d-flex align-items-center justify-content-beetween">
         <h1>Comics</h1>
-        <a href="{{route('comics.create')}}" class="btn btn-success">Inserisci fumetto</a>
+        <a href="{{route('comics.create')}}" class="btn btn-success mx-3">Inserisci fumetto</a>
     </div>
     <div class="card-body">
     <table class="table">
