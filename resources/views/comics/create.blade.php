@@ -13,35 +13,61 @@
         <h1>inserisci fumetto</h1>
     </div>
     <div class="card-body">
-        <form action="">
+        <form action="{{ route('comics.store') }}" method="POST">
+            @csrf
             <div clas="row">
                 <div class="col-6">
                    <div class="mb-3">
-                       <label for="name" class="form-label">Titolo</label>
-                       <input type="text" class="form-control" id="name" placeholder="Titolo" name="name">
+                       <label for="title" class="form-label">Titolo</label>
+                       <input type="text" class="form-control" id="title" placeholder="Titolo" name="title">
                    </div>
               </div>
               <div class="col-6">
                    <div class="mb-3">
-                       <label for="serie_name" class="form-label">Serie</label>
-                       <input type="text" class="form-control" id="serie_name" placeholder="Serie" name="serie_name">
+                       <label for="series" class="form-label">Serie</label>
+                       <input type="text" class="form-control" id="series" placeholder="Serie" name="series">
                    </div>
               </div>
               <div class="col-6">
                    <div class="mb-3">
-                       <label for="type_name" class="form-label">Tipologia</label>
-                       <input type="text" class="form-control" id="type_name" placeholder="Tipologia" name="type_name">
+                       <label for="type" class="form-label">Tipologia</label>
+                       <input type="text" class="form-control" id="type" placeholder="Tipologia" name="type">
                    </div>
               </div>
               <div class="col-6">
                    <div class="mb-3">
-                       <label for="thumb_name" class="form-label">Copertina</label>
-                       <input type="text" class="form-control" id="thumb_name" placeholder="Copertina" name="thumb_name">
+                       <label for="thumb" class="form-label">Copertina</label>
+                       <input type="text" class="form-control" id="thumb" placeholder="URL Copertina" name="thumb">
+                   </div>
+              </div>
+              <div class="col-6">
+                   <div class="mb-3">
+                       <label for="price" class="form-label">Prezzo</label>
+                       <input type="text" class="form-control" id="price" placeholder="Prezzo" name="price">
+                   </div>
+              </div>
+              <div class="col-6">
+                   <div class="mb-3">
+                       <label for="sale_date" class="form-label">data di uscita</label>
+                       <input type="date" class="form-control" id="sale_date" placeholder="data di uscita" name="sale_date">
+                   </div>
+              </div>
+              <div class="col-12">
+                   <div class="mb-3">
+                       <label for="description" class="form-label">Descrizione</label>
+                       <textarea class="form-control" id="description" rows="5" name="description"></textarea>
                    </div>
               </div>
          </div>
+         <div class="card-footer bg-white d-flex justify-content-between px-0 align-items-center mb-3">
+              <a class="btn btn-primary mx-3" href="{{route('comics.index')}}">Torna alla lista</a>
+              <div>
+                  <button type="submit" class="btn btn-success">Invia</button>
+                  <button type="reset" class="btn btn-secondary">cancella</button>
+              </div>
+        </div>
         </form>
     </div>
-  </div>  
+</div>  
 </body>
 </html>
