@@ -35,7 +35,7 @@
             @if($comic->thumb)
               <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid" width="20"/>
             @endif
-            {{$comic->title}}
+            <a href="{{ route('comics.show', $comic->id) }}">{{$comic->title}}</a>
         </th>
         <td>{{$comic->price}}</td>
         <td>{{$comic->series}}</td>
