@@ -9,8 +9,9 @@
 </head>
 <body>
     <div class="container">
-    <div class="card-title">
+    <div class="card-title d-flex align-items-center justify-content-beetween">
         <h1>Comics</h1>
+        <a href="{{route('comics.create')}}" class="btn btn-success">Inserisci fumetto</a>
     </div>
     <div class="card-body">
     <table class="table">
@@ -18,7 +19,6 @@
     <tr>
       
       <th scope="col">Title</th>
-      <th scope="col">Description</th>
       <th scope="col">Thumb</th>
       <th scope="col">Price</th>
       <th scope="col">Series</th>
@@ -31,7 +31,6 @@
       <tr>
         
         <td>{{$comic->title}}</td>
-        <td>{{$comic->description}}</td>
         <th scope="row">
             @if($comic->thumb)
               <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid" width="20"/>

@@ -12,6 +12,9 @@
     <div class="card-title">
         <h1>inserisci fumetto</h1>
     </div>
+    <div class="card-body">
+        <form action=""></form>
+    </div>
   </div>  
 </body>
 </html>
