@@ -24,6 +24,7 @@
       <th scope="col">Series</th>
       <th scope="col">Sale Date</th>
       <th scope="col">type</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -33,18 +34,19 @@
         <td>{{$comic->title}}</td>
         <th scope="row">
             @if($comic->thumb)
-              <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid" width="20"/>
+              <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid" width="30"/>
             @endif
-            <a href="{{ route('comics.show', $comic->id) }}">{{$comic->title}}</a>
+            
         </th>
         <td>{{$comic->price}}</td>
         <td>{{$comic->series}}</td>
         <td>{{$comic->sale_date}}</td>
         <td>{{$comic->type}}</td>
+        <td><a href="{{ route('comics.show', $comic->id) }}" class="btn btn-small btn-primary">Vedi</a></td>
       </tr>
     @empty
       <tr>
-        <td colspan = "8">
+        <td colspan = "7">
             <h3>Nessun Fumetto disponibile</h3>
         </td>
       </tr>
